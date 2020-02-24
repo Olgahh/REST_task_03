@@ -72,7 +72,10 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'task_1.wsgi.application'
-
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',)
+}
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
